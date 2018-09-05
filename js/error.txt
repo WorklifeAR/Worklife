@@ -1,0 +1,15 @@
+[29-Jan-2015 09:23:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\LasTablas\admin\lib\url.php on line 257
+[29-Jan-2015 09:23:45 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\LasTablas\admin\lib\url.php on line 257
+[29-Jan-2015 09:24:03 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\LasTablas\admin\lib\url.php on line 257
+[24-Apr-2015 09:11:00 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\Chique\admin\lib\url.php on line 246
+[24-Apr-2015 09:12:14 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\Chique\admin\lib\url.php on line 246
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
+[05-Jul-2015 08:47:32 America/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in C:\Servidor\ClaudiaCollections\admin\lib\url.php on line 364
