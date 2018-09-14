@@ -605,10 +605,15 @@ $(document).ready(function() {
                                         $longitud, $orden, $id_usuario, $activo, $destacado, $img1, $img2, $img3, $video, $fecha, $visualizaciones, $horario_man, $horario_tar, $horario_noc,
                                         $dia_lun, $dia_mar, $dia_mie, $dia_jue, $dia_vie, $dia_sab, $dia_dom, $urgencia, $realiza_domi, $realiza_esta, $realiza_ofic, $realiza_onli, $certificado_estudio,
                                         $matricula, $garantia, $seguro, $horario_24) = select_format($result->fields);
+                                        echo "<script>console.log('$fecha');</script>";
 
                                 $fecha = explode(" ", $fecha);
                                 $fecha = explode("-", $fecha[0]);
-                                $fecha = formato_mes($fecha[1]) . ", " . $fecha[0];
+                                if ($fecha[0] != 0000 ){
+                                    $fecha = formato_mes($fecha[1]) . ", " . $fecha[0];
+                                } else {
+                                    $fecha = NULL;
+                                }
 
                                 $distanciakm = "";
                                 $distanciakmfinal = "";
@@ -736,7 +741,11 @@ $(document).ready(function() {
                                                 <br /><br />
                                                 <i><?= $usuario ?></i>
                                                 <br />
-                                                Publicado desde <?= $fecha ?>
+                                                <?php
+                                                    if (!is_null($fecha)){
+                                                        echo "Publicado desde $fecha";
+                                                    }
+                                                ?>
                                             </div>
                                         </div>
                                     </div>

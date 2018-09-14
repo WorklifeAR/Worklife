@@ -576,7 +576,9 @@ if ($funcion == "") {
                 </div>        
                 <div class="col-sm-7 col-xs-12 text-left">
                     <a href="javascript:;" onclick="enviarAccion('<?= $id_directorio ?>', 'editar');" style="color:#000;"><h4><?= $nombre ?></h4></a>
-                    <div style="color:#bbb; margin:10px 0 15px 0;">Publicado desde <?= $fecha[2] ?>/<?= $fecha[1] ?> del <?= $fecha[0] ?></div>
+                    <?php
+                        echo "<div style='color:#bbb; margin:10px 0 15px 0;'>Publicado desde $fecha[2] / $fecha[1] del $fecha[0]</div>"
+                    ?>
                     <div><?= $direccion ?>, <?= $ciudad ?> | <?= $destacado ?> | <span style="color:<?= $color ?>;"><?= $estado ?></span> | <span style="color:#ccc;">#<?= $id_directorio ?></span></div>
 					<?=$mensajeact?>
                 </div>

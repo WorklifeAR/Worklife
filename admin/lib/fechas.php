@@ -54,7 +54,8 @@ function formato_mes($mes){
 					 "09"=>"Sep",
 					 "10"=>"Oct",
 					 "11"=>"Nov",
-					 "12"=>"Dic");
+					 "12"=>"Dic",
+					 "00"=>"Ene");
 	
 	return $mes_ano[$mes];
 }

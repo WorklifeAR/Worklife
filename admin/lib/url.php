@@ -458,7 +458,7 @@ function sanear_string($string)
 {
  	$string = trim($string);
  	
-	//$string = utf8_decode($string);
+	$string = utf8_decode($string);
 	
     //Esta parte se encarga de eliminar cualquier caracter extraño
     $string = str_replace(
