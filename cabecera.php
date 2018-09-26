@@ -145,6 +145,7 @@ $_SESSION['c_base_location'] = $c_base_location;
         <meta name="keywords" content="<?= $c_cabeceras ?>">
         <meta name="robots" content="INDEX,FOLLOW"/>
         <meta name="copyright" content="Worklife"/>
+        <base href="<?=$c_base_location?>" target="_top" />
         <link rel="SHORTCUT ICON" href="favicon.ico"/>
 
 <?= $c_scripts ?>
