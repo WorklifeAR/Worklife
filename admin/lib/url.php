@@ -54,7 +54,7 @@ function implantar_urls($db){
 	$lar = strlen($_SERVER['HTTP_HOST']);
 	
 	$host_final = substr($_SESSION['c_base_location'], ($pos+$lar), strlen($_SESSION['c_base_location']));
-	
+	echo "<script>console.log('$host_final');</script>";
 	$lineas = "# Activar RewriteEngine - New Generation ".date('d-m-Y')."
 Options +SymLinksIfOwnerMatch
 RewriteEngine on
@@ -180,7 +180,7 @@ RewriteRule index.html	index.php
 		
 			list ($id_directorio,$nombre) = select_format($result->fields);
 			
-			$prefijo="servicio";
+			$prefijo="";
 			
 			$lineas .= "RewriteRule ".$prefijo."/".organizar_nombre($nombre)."	detalle-servicio.php?id=".$id_directorio."
 ";
