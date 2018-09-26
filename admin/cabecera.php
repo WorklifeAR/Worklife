@@ -113,7 +113,7 @@
 <meta name="description" content="<?=$c_tag_descripcion?>">
 <meta name="keywords" content="<?=$c_cabeceras?>">
 <meta name="robots" content="INDEX,FOLLOW"/>
-<meta name="copyright" content="2015 by WA"/>
+<meta name="copyright" content="Worklife"/>
 
 <base href="<?=$c_base_location?>" target="_top" />
 <link rel="SHORTCUT ICON" href="favicon.ico"/>
