@@ -209,7 +209,7 @@ function guardar($nombre, $categoria, $descripcion, $direccion, $ciudad, $estado
 	
 	////////////////////////
 		
-	$adicional_formato="http://www.worklife.com.ar/servicio/" . organizar_nombre($nombre)."";
+	$adicional_formato="$_SESSION['c_base_location']/servicio/" . organizar_nombre($nombre)."";
 	enviar_notificacion($_SESSION['sess_usu_email'], $_SESSION['sess_nombre'], "NUEVA_PUBLICACION", "1", $adicional_formato) ;
 	
 	////////////////////////
@@ -576,9 +576,7 @@ if ($funcion == "") {
                 </div>        
                 <div class="col-sm-7 col-xs-12 text-left">
                     <a href="javascript:;" onclick="enviarAccion('<?= $id_directorio ?>', 'editar');" style="color:#000;"><h4><?= $nombre ?></h4></a>
-                    <?php
-                        echo "<div style='color:#bbb; margin:10px 0 15px 0;'>Publicado desde $fecha[2] / $fecha[1] del $fecha[0]</div>"
-                    ?>
+                    <div style="color:#bbb; margin:10px 0 15px 0;">Publicado desde <?= $fecha[2] ?>/<?= $fecha[1] ?> del <?= $fecha[0] ?></div>
                     <div><?= $direccion ?>, <?= $ciudad ?> | <?= $destacado ?> | <span style="color:<?= $color ?>;"><?= $estado ?></span> | <span style="color:#ccc;">#<?= $id_directorio ?></span></div>
 					<?=$mensajeact?>
                 </div>
