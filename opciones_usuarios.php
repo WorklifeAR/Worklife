@@ -1,6 +1,6 @@
 <div align="center" id="Contenido_archivo">
     <?php
-    if ((!isset($_SESSION['usuario'])) && ($op_usu == "")) {
+    if (((!isset($_SESSION['usuario'])) && ($op_usu == "")) || ((!isset($_SESSION['usuario'])) && ($op_usu == "premium"))) {
 		
 		if($seguimiento==""){ 
 			echo "<br /><h1>Registraté o Inicia sesión</h1> <h2>Empezá ya en el mundo de profesionales WORKLife</h2>";
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-sm-6 col-xs-12">
-                    <div class="buscarBtn3" class="google" style="text-align:center; color:#fff; font-weight:700; background:#C30; padding:15px 0;cursor:pointer" onclick="startApp()">
+                    <div class="buscarBtn3 google" style="text-align:center; color:#fff; font-weight:700; background:#C30; padding:15px 0;cursor:pointer" onclick="startApp()">
                         <i class="fa fa-google-plus" aria-hidden="true"></i> Iniciar sesion con Google +
                     </div>
                 </div>
@@ -623,7 +623,7 @@
                     <div style="text-align:center; color:#fff; font-weight:700; background:#333; padding:25px 0; margin:5px 0;">
                         <a href="javascript:;" style="color:#fff; font-weight:700;"><i class="fa fa-briefcase" aria-hidden="true"></i> Cuenta Premium</a>
                     </div>
-					<div style="margin:10px 0; min-height:80px; width:100%;">Debes completar tu perfil. Informate más sobre nuestros planes <a href="contenido/cuentas-premium.html">aquí</a>.</div>
+					<div style="margin:10px 0; min-height:80px; width:100%;">Debes completar tu perfil. Informate más sobre nuestros planes <a href="info-usuario-premium.html">aquí</a>.</div>
                 </div>  
 				<?php
 					} else {
@@ -636,7 +636,7 @@
                     <?php
                    
 
-                    echo '<div style="margin:10px 0; min-height:80px; width:100%;">Tu plan actual es "' . $plan . '". Informate más sobre nuestros planes <a href="contenido/cuentas-premium.html">aquí</a>.</div>';
+                    echo '<div style="margin:10px 0; min-height:80px; width:100%;">Tu plan actual es "' . $plan . '". Informate más sobre nuestros planes <a href="info-usuario-premium.html">aquí</a>.</div>';
                     ?>
                 </div>  
 				<?php

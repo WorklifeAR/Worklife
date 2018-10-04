@@ -73,7 +73,7 @@ $_SESSION['url_visto'] = "";
             <input type="button" class="buscarBtn2" onclick="javascript:window.location.href = 'listado-servicios.html';" style="width:100%; background:#7C4793;" value="Buscar yo mismo" /> 
         </div>
         <div class="col-md-6 col-xs-12">
-            <input type="button" class="buscarBtn" onclick="javascript:window.location.href = 'contenido/cuentas-premium.html';" style="width:100%; background:#FAA532;" value="Cuenta Premium" /> 
+            <input type="button" class="buscarBtn" onclick="javascript:window.location.href = 'info-usuario-premium.html'" style="width:100%; background:#FAA532;" value="Cuenta Premium" /> 
         </div>
     </div>
 </div>
