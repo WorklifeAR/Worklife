@@ -17,7 +17,6 @@ FUNCIONES DE USUARIOS
 ******************************************************************************************************************/
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 function iniciar_session($us_login,$us_pass,$destino,$db){	
 	if($destino=="network"){
 		$sql="	SELECT 
@@ -67,7 +66,7 @@ function iniciar_session($us_login,$us_pass,$destino,$db){
 			  WHERE us_id ='".$usuario_id."' ";
 				
 		$result=$db->Execute($sql);
-	
+
 		list($us_id, $us_codigo_ref, $us_nombre, $us_pais, $us_telefono, $us_email, $us_direccion, $us_nacimiento,
 			 $us_last_name, $us_sexo, $us_descripcion, $us_login, $us_pass, $us_postal, $us_ciudad, $us_estado_us, $us_appartment,$us_network)=select_format($result->fields);
 			 
@@ -119,6 +118,7 @@ function iniciar_session($us_login,$us_pass,$destino,$db){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function session_permiso($modulo){
+	
 	if(!isset($_SESSION['usuario'])){
 		echo '<META HTTP-EQUIV="Refresh" CONTENT="0;URL='.$_SESSION['c_base_location'].'admin.php">';
 		die();
@@ -160,7 +160,6 @@ function session_permiso($modulo){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function permiso_modulo($modulo){
-
 	$permisos_usuario = $_SESSION['permisos'];
 	if($permisos_usuario=="all"){
 		return true;
@@ -224,6 +223,7 @@ function inicio_usuario_admin($usu,$pass,$db){
 		$_SESSION['usuario']="admin";		
 		$_SESSION['permisos']="all";
 		$_SESSION['sess_nombre']=_ADMIN_SISTEMA;
+		$_SESSION['sess_usu_id']= 0;
 		
 		registrar_cambios($db,  date('Y-m-d'), $_SESSION['sess_nombre'], '', '', '', 'INICIO_SESSION');
 		
@@ -429,8 +429,7 @@ function modificar_usuario($us_id, $us_codigo_ref, $us_nombre, $us_pais, $us_tel
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function enviar_cuenta($correo_recordar, $db){
-	
+function enviar_cuenta($correo_recordar, $db){	
 	$sql1_1="SELECT us_email, us_login, us_pass, us_nombre, us_codigo_ref, us_descripcion
 			 FROM ic_usuarios 
 			 WHERE us_email='".$correo_recordar."' "; 	
@@ -535,5 +534,4 @@ function registrar_newsletter($correo_news, $db){
 	
 	$db->close();
 }
-
 ?>

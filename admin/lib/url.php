@@ -54,7 +54,6 @@ function implantar_urls($db){
 	$lar = strlen($_SERVER['HTTP_HOST']);
 	
 	$host_final = substr($_SESSION['c_base_location'], ($pos+$lar), strlen($_SESSION['c_base_location']));
-	echo "<script>console.log('$host_final');</script>";
 	$lineas = "# Activar RewriteEngine - New Generation ".date('d-m-Y')."
 Options +SymLinksIfOwnerMatch
 RewriteEngine on
@@ -457,8 +456,6 @@ function organizar_nombre_link($modulo, $cadena){
 function sanear_string($string)
 {
  	$string = trim($string);
- 	
-	$string = utf8_decode($string);
 	
     //Esta parte se encarga de eliminar cualquier caracter extraño
     $string = str_replace(
@@ -509,10 +506,9 @@ function sanear_string($string)
         array('n', 'N', 'c', 'C',),
         $string
     );
- 	
+	$string = utf8_encode($string);
 	return $string;
 }
-
 /***********************************************************************************************************************************/
 
 ?>
