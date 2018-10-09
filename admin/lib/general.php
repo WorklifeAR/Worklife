@@ -71,7 +71,7 @@ function insert_bd_format($campos, $tabla, $inserts, $db){
 	$insert="";
 	
 	for($i=0; $i<count($inserts); $i++){
-		$insert .= "'".utf8_decode(addslashes($inserts[$i]))."'";
+		$insert .= "'".addslashes($inserts[$i])."'";
 		
 		if(($i+1)!=count($inserts)){
 			$insert .= ",";
@@ -97,7 +97,7 @@ function update_bd_format($campos, $tabla, $updates, $where, $db){
 	for($i=0; $i<count($campos); $i++){
 			
 		if(trim($campos[$i])!=""){
-			$update .= "".$campos[$i]."='".utf8_decode(addslashes($updates[$i]))."'";
+			$update .= "".$campos[$i]."='".addslashes($updates[$i])."'";
 		}
 		
 		if(($i+1)<count($campos) && trim($campos[$i+1])!=""){

@@ -506,7 +506,7 @@ function sanear_string($string)
         array('n', 'N', 'c', 'C',),
         $string
     );
-	$string = utf8_encode($string);
+	//$string = utf8_encode($string);
 	return $string;
 }
 /***********************************************************************************************************************************/

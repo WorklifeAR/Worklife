@@ -27,6 +27,7 @@ $c_tag_descripcion= 	$variables_metodo[13];
 $c_scripts= 	$variables_metodo[14];
 
 if ($funcion == "guardar"){
+  echo "<script> alert('{$c_tag_descripcion}');</script>";
 	guardar($num_noti,$correo,$fecha,$cabeceras,$titulo,$posicion,$login,$new_pass,$grupo,$idioma_activo,$usuario_activo,$c_base_location,$c_tag_descripcion,$c_scripts);
 }
 
