@@ -2,6 +2,8 @@
 Options +SymLinksIfOwnerMatch
 RewriteEngine on
 RewriteBase /
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
